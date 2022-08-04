@@ -20,7 +20,7 @@
             <Font name="Arial" size="10.0" />
          </font>
       </TextField>
-      <TextField layoutX="37.0" layoutY="175.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="167.0" promptText="Author  Name">
+      <TextField layoutX="37.0" layoutY="168.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="167.0" promptText="Author  Name">
          <font>
             <Font name="Arial" size="10.0" />
          </font>
@@ -39,23 +39,8 @@
             </Label>
          </children>
       </AnchorPane>
-      <TextField layoutX="37.0" layoutY="225.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="167.0" promptText="ISBN">
-         <font>
-            <Font size="10.0" />
-         </font>
-      </TextField>
-      <ComboBox layoutX="37.0" layoutY="279.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="167.0" />
-      <Label graphicTextGap="10.0" layoutX="52.0" layoutY="81.0" lineSpacing="3.0" text="Input Book Infomation" textFill="#06034d" textOverrun="CLIP">
-         <font>
-            <Font name="Arial" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="37.0" layoutY="161.0" text="Author Name">
-         <font>
-            <Font name="Arial" size="10.0" />
-         </font>
-      </Label>
-      <Label layoutX="37.0" layoutY="211.0" text="ISBN">
+      <ComboBox layoutX="37.0" layoutY="211.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="167.0" />
+      <Label layoutX="37.0" layoutY="154.0" text="Author Name">
          <font>
             <Font name="Arial" size="10.0" />
          </font>
@@ -65,29 +50,33 @@
             <Font name="Arial" size="10.0" />
          </font>
       </Label>
-      <Label layoutX="37.0" layoutY="265.0" text="Category">
+      <Label layoutX="37.0" layoutY="197.0" text="Category">
          <font>
             <Font name="Arial" size="10.0" />
          </font>
       </Label>
-      <TreeTableView layoutX="224.0" layoutY="110.0" prefHeight="207.0" prefWidth="355.0">
-         <columns>
-            <TreeTableColumn prefWidth="75.40086364746094" text="Book Name" />
-            <TreeTableColumn prefWidth="51.538787841796875" text="Author" />
-            <TreeTableColumn prefWidth="42.369659423828125" text="ISBN" />
-            <TreeTableColumn prefWidth="58.507904052734375" text="Quantity" />
-            <TreeTableColumn prefWidth="125.0" text="Category" />
-         </columns>
-      </TreeTableView>
-      <Label layoutX="303.0" layoutY="81.0" text="Book Infomation From Database" textFill="#06034d" textOverrun="CLIP">
-         <font>
-            <Font name="Arial" size="14.0" />
-         </font>
-      </Label>
-      <Button layoutX="98.0" layoutY="327.0" mnemonicParsing="false" style="-fx-background-color: #06034d#06034d;" text="Submit" textFill="WHITE">
+      <Button layoutX="95.0" layoutY="270.0" mnemonicParsing="false" style="-fx-background-color: #06034d#06034d;" text="Submit" textFill="WHITE">
          <font>
             <Font name="Arial" size="10.0" />
          </font>
       </Button>
+      <TreeTableView layoutX="224.0" layoutY="110.0" prefHeight="207.0" prefWidth="355.0">
+         <columns>
+            <TreeTableColumn prefWidth="24.4801025390625" text="ID" />
+            <TreeTableColumn prefWidth="114.48416137695312" text="Book Name" />
+            <TreeTableColumn prefWidth="112.51580810546875" text="Author" />
+            <TreeTableColumn prefWidth="103.15322875976562" text="Category" />
+         </columns>
+      </TreeTableView>
+      <Label alignment="CENTER" layoutX="37.0" layoutY="81.0" prefHeight="18.0" prefWidth="164.0" style="-fx-background-color: #fbbc84#fbbc84 #fbbc84#fbbc84;" text="Input Book Infomation" textFill="#06034d" textOverrun="CLIP">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="283.0" layoutY="81.0" prefHeight="18.0" prefWidth="232.0" style="-fx-background-color: #fbbc84#fbbc84 #fbbc84#fbbc84;" text="Book Infomation From Database" textFill="#06034d" textOverrun="CLIP">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
