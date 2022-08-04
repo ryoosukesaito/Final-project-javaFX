@@ -15,7 +15,7 @@
          <children>
             <ImageView fitHeight="59.0" fitWidth="51.0" layoutX="1.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@bookImage.png" />
+                  <Image url="@../img/bookImage.png" />
                </image>
             </ImageView>
             <Label layoutX="54.0" layoutY="15.0" prefHeight="26.0" prefWidth="258.0" text="GO MANAGE INVENTORY" textFill="#06034d">

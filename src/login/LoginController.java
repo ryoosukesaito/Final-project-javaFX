@@ -45,24 +45,24 @@ public class LoginController /*implements Initializable*/ {
 	public void Login(ActionEvent event) {
 		
 		if(this.loginModel.isLogin(this.username.getText(), this.password.getText())) {
-			this.loginStatus.setText("You have successfully logged in!");
+//			this.loginStatus.setText("You have successfully logged in!");
 			
 			Stage stage = (Stage) this.loginBtn.getScene().getWindow();
 			stage.close();
 			
-//			adminLogin();
+			homeLogin();
 		}else {
 			this.loginStatus.setText("Wrong Credentials");
 		}
 	}
 	
-	public void adminLogin() {
+	public void homeLogin() {
 		
 		try {
 			
 			Stage adminStage = new Stage();
 			FXMLLoader adminLoader = new FXMLLoader();
-			Pane root = (Pane) adminLoader.load(getClass().getResource("/admin/Admin.fxml").openStream());
+			Pane root = (Pane) adminLoader.load(getClass().getResource("/home/Home.fxml").openStream());
 			
 			Scene scene = new Scene(root);
 //			scene.getRoot().setStyle(null);
