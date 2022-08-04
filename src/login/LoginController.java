@@ -15,7 +15,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class LoginController implements Initializable {
+public class LoginController /*implements Initializable*/ {
 	
 	LoginModel loginModel = new LoginModel();
 	
@@ -30,16 +30,16 @@ public class LoginController implements Initializable {
 	@FXML
 	private Label loginStatus;
 
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		
-		if(this.loginModel.isDatabaseConnected()) {
-			this.dbStatus.setText("Connected");
-		}else {
-			this.dbStatus.setText("Not Connected");
-		}
-		
-	}
+//	@Override
+//	public void initialize(URL arg0, ResourceBundle arg1) {
+//		
+//		if(this.loginModel.isDatabaseConnected()) {
+//			this.dbStatus.setText("Connected");
+//		}else {
+//			this.dbStatus.setText("Not Connected");
+//		}
+//		
+//	}
 	
 	@FXML
 	public void Login(ActionEvent event) {
