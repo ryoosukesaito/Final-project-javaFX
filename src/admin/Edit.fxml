@@ -68,7 +68,7 @@
             <TreeTableColumn prefWidth="103.15322875976562" text="Category" />
         </columns>
       </TreeTableView>
-      <Button layoutX="378.0" layoutY="327.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="51.0" style="-fx-background-color: #06034d#06034d;" text="Delate" textFill="WHITE">
+      <Button layoutX="456.0" layoutY="326.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="51.0" style="-fx-background-color: #06034d#06034d;" text="Delate" textFill="WHITE">
          <font>
             <Font name="Arial" size="10.0" />
          </font>
@@ -79,6 +79,11 @@
          </font>
       </Label>
       <Button layoutX="95.0" layoutY="270.0" mnemonicParsing="false" style="-fx-background-color: #06034d#06034d;" text="Submit" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="10.0" />
+         </font>
+      </Button>
+      <Button layoutX="289.0" layoutY="327.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="51.0" text="Reload">
          <font>
             <Font name="Arial" size="10.0" />
          </font>

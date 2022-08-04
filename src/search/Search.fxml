@@ -55,7 +55,7 @@
             <Font name="Arial" size="10.0" />
          </font>
       </Label>
-      <Button layoutX="95.0" layoutY="270.0" mnemonicParsing="false" style="-fx-background-color: #06034d#06034d;" text="Submit" textFill="WHITE">
+      <Button layoutX="95.0" layoutY="270.0" mnemonicParsing="false" style="-fx-background-color: #06034d#06034d;" text="Search" textFill="WHITE">
          <font>
             <Font name="Arial" size="10.0" />
          </font>
