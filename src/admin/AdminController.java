@@ -58,7 +58,7 @@ public class AdminController implements Initializable {
 	
 	@FXML
 	public void loadEmployeeData(ActionEvent event) {
-		String sql = "SELECT * FROM a0522.employee_tbl";
+		String sql = "SELECT * FROM b0522.employee_tbl";
 		
 		Connection conn = dbc;
 		this.employeeData = FXCollections.observableArrayList();
@@ -89,7 +89,7 @@ public class AdminController implements Initializable {
 	
 	@FXML
 	private void addEmployee(ActionEvent event) {
-		String sql = "INSERT INTO a0522.employee_tbl (name, dept, salary) VALUES (?,?,?)";
+		String sql = "INSERT INTO b0522.employee_tbl (name, dept, salary) VALUES (?,?,?)";
 		PreparedStatement statement = null;
 		
 		try {
