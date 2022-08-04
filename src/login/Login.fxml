@@ -66,11 +66,16 @@
                   <Font name="Arial" size="11.0" />
                </font>
             </Hyperlink>
+<<<<<<< HEAD
             <Label fx:id="loginStatus" layoutX="184.0" layoutY="138.0" prefHeight="17.0" prefWidth="0.0" textFill="RED" />
+=======
+            <Label id="loginStatus" layoutX="184.0" layoutY="138.0" prefHeight="17.0" prefWidth="0.0" textFill="RED" />
+>>>>>>> 44eea2693b5b32207ffeb65a12aeb6f42ed9f714
          </children>
       </AnchorPane>
    </center>
 </BorderPane>
+<<<<<<< HEAD
 
 <!-- <?xml version="1.0" encoding="UTF-8"?>
 
@@ -96,3 +101,5 @@
       <Label fx:id="loginStatus" layoutX="31.0" layoutY="254.0" />
    </children>
 </AnchorPane> -->
+=======
+>>>>>>> 44eea2693b5b32207ffeb65a12aeb6f42ed9f714
