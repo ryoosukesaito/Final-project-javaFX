@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="145.0" layoutY="273.0" prefHeight="56.0" prefWidth="312.0" style="-fx-background-color: #ebe6e6#ebe6e6;">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="51.0" layoutX="1.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bookImage.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="54.0" layoutY="15.0" prefHeight="26.0" prefWidth="258.0" text="GO MANAGE INVENTORY" textFill="#06034d">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView editable="true" layoutX="59.0" layoutY="139.0" prefHeight="83.0" prefWidth="481.0">
+        <columns>
+          <TableColumn prefWidth="60.0" text="Classics" />
+          <TableColumn prefWidth="60.0" text="Tragedy" />
+            <TableColumn prefWidth="60.0" text="SF" />
+            <TableColumn prefWidth="60.0" text="Fantasy" />
+            <TableColumn prefWidth="60.0" text="Action" />
+            <TableColumn prefWidth="60.0" text="Mystery" />
+            <TableColumn prefWidth="60.0" text="Romance" />
+            <TableColumn prefWidth="60.0" text="Comedy" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="188.0" layoutY="99.0" prefHeight="25.0" prefWidth="223.0" style="-fx-background-color: #fbbc84#fbbc84;" text="Inventory Figures by Categories" textFill="#06034d">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutY="-3.0" prefHeight="67.0" prefWidth="600.0" style="-fx-background-color: #014457#014457;">
+         <children>
+            <Button layoutX="519.0" layoutY="25.0" mnemonicParsing="false" prefWidth="61.0" text="Logout" textFill="#06034d">
+               <font>
+                  <Font name="Arial" size="10.0" />
+               </font>
+            </Button>
+            <Label layoutX="16.0" layoutY="26.0" text=" BOOK INVENTORY MANAGEMENT SYSTEM" textFill="WHITE">
+               <font>
+                  <Font name="Rockwell" size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

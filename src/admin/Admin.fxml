@@ -77,51 +77,34 @@
 
 <!-- <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
    <children>
-      <AnchorPane layoutX="145.0" layoutY="273.0" prefHeight="56.0" prefWidth="312.0" style="-fx-background-color: #ebe6e6#ebe6e6;">
-         <children>
-            <ImageView fitHeight="59.0" fitWidth="51.0" layoutX="1.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@bookImage.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="54.0" layoutY="15.0" prefHeight="26.0" prefWidth="258.0" text="GO MANAGE INVENTORY" textFill="#06034d">
-               <font>
-                  <Font name="Arial Bold" size="20.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-      <TableView editable="true" layoutX="59.0" layoutY="139.0" prefHeight="83.0" prefWidth="481.0">
-        <columns>
-          <TableColumn prefWidth="60.0" text="Classics" />
-          <TableColumn prefWidth="60.0" text="Tragedy" />
-            <TableColumn prefWidth="60.0" text="SF" />
-            <TableColumn prefWidth="60.0" text="Fantasy" />
-            <TableColumn prefWidth="60.0" text="Action" />
-            <TableColumn prefWidth="60.0" text="Mystery" />
-            <TableColumn prefWidth="60.0" text="Romance" />
-            <TableColumn prefWidth="60.0" text="Comedy" />
-        </columns>
-      </TableView>
-      <Label alignment="CENTER" layoutX="188.0" layoutY="99.0" prefHeight="25.0" prefWidth="223.0" style="-fx-background-color: #fbbc84#fbbc84;" text="Inventory Figures by Categories" textFill="#06034d">
+      <TextField layoutX="37.0" layoutY="124.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="167.0" promptText="Book Name">
          <font>
-            <Font name="Arial" size="15.0" />
+            <Font name="Arial" size="10.0" />
          </font>
-      </Label>
-      <AnchorPane layoutY="-3.0" prefHeight="67.0" prefWidth="600.0" style="-fx-background-color: #014457#014457;">
+      </TextField>
+      <TextField layoutX="37.0" layoutY="169.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="167.0" promptText="Author  Name">
+         <font>
+            <Font name="Arial" size="10.0" />
+         </font>
+      </TextField>
+      <AnchorPane prefHeight="67.0" prefWidth="600.0" style="-fx-background-color: #014457;">
          <children>
-            <Button layoutX="519.0" layoutY="25.0" mnemonicParsing="false" prefWidth="61.0" text="Logout" textFill="#06034d">
+            <Button layoutX="519.0" layoutY="26.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="51.0" text="Home">
                <font>
                   <Font name="Arial" size="10.0" />
                </font>
@@ -133,83 +116,71 @@
             </Label>
          </children>
       </AnchorPane>
-   </children>
-</AnchorPane>
- -->
-
-<!-- <?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.AdminController">
-   <children>
-      <TabPane prefHeight="720.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
-        <tabs>
-          <Tab text="Employees">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <HBox layoutX="324.0" layoutY="-1.0" prefHeight="690.0" prefWidth="950.0">
-                           <children>
-                              <TableView fx:id="employeeDataTableView" prefHeight="690.0" prefWidth="970.0">
-                                <columns>
-                                  <TableColumn fx:id="idColumn" prefWidth="139.0" text="ID" />
-                                  <TableColumn fx:id="nameColumn" prefWidth="281.0" text="Name" />
-                                    <TableColumn fx:id="departmentColumn" prefWidth="344.0" text="Department" />
-                                    <TableColumn fx:id="salaryColumn" prefWidth="185.0" text="Salary" />
-                                </columns>
-                              </TableView>
-                           </children>
-                        </HBox>
-                        <VBox prefHeight="690.0" prefWidth="320.0">
-                           <children>
-                              <Label alignment="CENTER" prefHeight="70.0" prefWidth="320.0" text="Add Employee" textAlignment="CENTER">
-                                 <font>
-                                    <Font name="SansSerif Bold" size="24.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="name" prefHeight="40.0" promptText="Name">
-                                 <VBox.margin>
-                                    <Insets left="20.0" right="20.0" top="10.0" />
-                                 </VBox.margin></TextField>
-                              <TextField fx:id="department" prefHeight="40.0" promptText="Department">
-                                 <VBox.margin>
-                                    <Insets left="20.0" right="20.0" top="10.0" />
-                                 </VBox.margin></TextField>
-                              <TextField fx:id="salary" prefHeight="40.0" promptText="Salary">
-                                 <VBox.margin>
-                                    <Insets left="20.0" right="20.0" top="10.0" />
-                                 </VBox.margin></TextField>
-                              <Button fx:id="addEntryBtn" mnemonicParsing="false" onAction="#addEmployee" prefHeight="40.0" prefWidth="333.0" text="Add Entry">
-                                 <VBox.margin>
-                                    <Insets left="20.0" right="20.0" top="10.0" />
-                                 </VBox.margin></Button>
-                              <Button fx:id="clearBtn" mnemonicParsing="false" onAction="#clearFields" prefHeight="40.0" prefWidth="333.0" text="Clear Form">
-                                 <VBox.margin>
-                                    <Insets left="20.0" right="20.0" />
-                                 </VBox.margin></Button>
-                              <Button fx:id="loadBtn" alignment="CENTER" mnemonicParsing="false" onAction="#loadEmployeeData" prefHeight="40.0" prefWidth="333.0" text="Load Data">
-                                 <VBox.margin>
-                                    <Insets left="20.0" right="20.0" />
-                                 </VBox.margin></Button>
-                           </children>
-                        </VBox>
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-        </tabs>
-      </TabPane>
+      <TextField layoutX="37.0" layoutY="214.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="167.0" promptText="ISBN">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <ComboBox layoutX="37.0" layoutY="298.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="167.0" />
+      <TextField layoutX="37.0" layoutY="256.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="167.0" promptText="Price">
+         <font>
+            <Font name="Arial" size="10.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" layoutX="37.0" layoutY="81.0" prefHeight="18.0" prefWidth="164.0" style="-fx-background-color: #fbbc84#fbbc84 #fbbc84#fbbc84;" text="Input Book Infomation" textFill="#06034d" textOverrun="CLIP">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="155.0" text="Author Name">
+         <font>
+            <Font name="Arial" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="200.0" text="ISBN">
+         <font>
+            <Font name="Arial" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="110.0" text="Book Name">
+         <font>
+            <Font name="Arial" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="242.0" text="Price">
+         <font>
+            <Font name="Arial" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="284.0" text="Category">
+         <font>
+            <Font name="Arial" size="10.0" />
+         </font>
+      </Label>
+      <TreeTableView layoutX="224.0" layoutY="110.0" prefHeight="207.0" prefWidth="355.0">
+        <columns>
+          <TreeTableColumn prefWidth="75.40086364746094" text="Book Name" />
+          <TreeTableColumn prefWidth="51.538787841796875" text="Author" />
+            <TreeTableColumn prefWidth="42.369659423828125" text="ISBN" />
+            <TreeTableColumn prefWidth="40.992095947265625" text="Price" />
+            <TreeTableColumn prefWidth="58.507904052734375" text="Quantity" />
+            <TreeTableColumn prefWidth="87.01290893554688" text="Category" />
+        </columns>
+      </TreeTableView>
+      <Button layoutX="378.0" layoutY="327.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="51.0" style="-fx-background-color: #06034d#06034d;" text="Delate" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="10.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="283.0" layoutY="81.0" prefHeight="18.0" prefWidth="232.0" style="-fx-background-color: #fbbc84#fbbc84 #fbbc84#fbbc84;" text="Book Infomation From Database" textFill="#06034d" textOverrun="CLIP">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="98.0" layoutY="327.0" mnemonicParsing="false" style="-fx-background-color: #06034d#06034d;" text="Submit" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="10.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane> -->

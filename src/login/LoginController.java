@@ -45,12 +45,12 @@ public class LoginController /*implements Initializable*/ {
 	public void Login(ActionEvent event) {
 		
 		if(this.loginModel.isLogin(this.username.getText(), this.password.getText())) {
-//			this.loginStatus.setText("You have successfully logged in!");
+			this.loginStatus.setText("You have successfully logged in!");
 			
 			Stage stage = (Stage) this.loginBtn.getScene().getWindow();
 			stage.close();
 			
-			adminLogin();
+//			adminLogin();
 		}else {
 			this.loginStatus.setText("Wrong Credentials");
 		}
