@@ -22,22 +22,22 @@ import javafx.scene.control.cell.PropertyValueFactory;
 public class AdminController implements Initializable {
 
 	@FXML
-	private TextField name;
+	private TextField Book_Name;
 	@FXML
-	private TextField department;
+	private TextField Author_Name;
 	@FXML
-	private TextField salary;
+	private TextField Category;
 	
 	@FXML
-	private TableView<EmployeeData> employeeDataTableView;
+	private TableView<BookData> bookDataTableView;
 	@FXML
-	private TableColumn<EmployeeData, String> idColumn;
+	private TableColumn<BookData, String> idColumn;
 	@FXML
-	private TableColumn<EmployeeData, String> nameColumn;
+	private TableColumn<BookData, String> booknameColumn;
 	@FXML
-	private TableColumn<EmployeeData, String> departmentColumn;
+	private TableColumn<BookData, String> authernameColumn;
 	@FXML
-	private TableColumn<EmployeeData, String> salaryColumn;
+	private TableColumn<BookData, String> categoryColumn;
 	
 	@FXML
 	private Button addEntryBtn;
@@ -47,7 +47,7 @@ public class AdminController implements Initializable {
 	private Button loadBtn;
 	
 	private Connection dbc;
-	private ObservableList<EmployeeData> employeeData;
+	private ObservableList<BookData> bookData;
 	
 	
 	
@@ -58,17 +58,17 @@ public class AdminController implements Initializable {
 	
 	@FXML
 	public void loadEmployeeData(ActionEvent event) {
-		String sql = "SELECT * FROM b0522.employee_tbl";
+		String sql = "SELECT * FROM b0522.edit_tbl";
 		
 		Connection conn = dbc;
-		this.employeeData = FXCollections.observableArrayList();
+		this.bookData = FXCollections.observableArrayList();
 		
 		try {
 			ResultSet resultSet = conn.createStatement().executeQuery(sql);
 			
 			while(resultSet.next()){
 				
-				this.employeeData.add(new EmployeeData(
+				this.bookData.add(new BookData(
 						resultSet.getString(1), 
 						resultSet.getString(2), 
 						resultSet.getString(3), 
@@ -79,26 +79,26 @@ public class AdminController implements Initializable {
 			e.printStackTrace();
 		}
 		
-		this.idColumn.setCellValueFactory(new PropertyValueFactory<EmployeeData, String>("id"));
-		this.nameColumn.setCellValueFactory(new PropertyValueFactory<EmployeeData, String>("name"));
-		this.departmentColumn.setCellValueFactory(new PropertyValueFactory<EmployeeData, String>("department"));
-		this.salaryColumn.setCellValueFactory(new PropertyValueFactory<EmployeeData, String>("salary"));
+		this.idColumn.setCellValueFactory(new PropertyValueFactory<BookData, String>("id"));
+		this.booknameColumn.setCellValueFactory(new PropertyValueFactory<BookData, String>("Book_Name"));
+		this.authernameColumn.setCellValueFactory(new PropertyValueFactory<BookData, String>("Author_Name"));
+		this.categoryColumn.setCellValueFactory(new PropertyValueFactory<BookData, String>("Category"));
 		
-		this.employeeDataTableView.setItems(employeeData);
+		this.bookDataTableView.setItems(bookData);
 	}
 	
 	@FXML
 	private void addEmployee(ActionEvent event) {
-		String sql = "INSERT INTO b0522.employee_tbl (name, dept, salary) VALUES (?,?,?)";
+		String sql = "INSERT INTO b0522.edit_tbl (Book_Name, Author_Name, Category) VALUES (?,?,?)";
 		PreparedStatement statement = null;
 		
 		try {
 			Connection conn = dbConnection.getConnection();
 			statement = conn.prepareStatement(sql);
 			
-			statement.setString(1, this.name.getText());
-			statement.setString(2, this.department.getText());
-			statement.setString(3, this.salary.getText());
+			statement.setString(1, this.Book_Name.getText());
+			statement.setString(2, this.Author_Name.getText());
+			statement.setString(3, this.Category.getText());
 			
 			statement.execute();
 			
@@ -118,9 +118,9 @@ public class AdminController implements Initializable {
 	
 	@FXML
 	private void clearFields(ActionEvent event) {
-		this.name.setText("");
-		this.department.setText("");
-		this.salary.setText("");
+		this.Book_Name.setText("");
+		this.Author_Name.setText("");
+		this.Category.setText("");
 	}
 	
 	
