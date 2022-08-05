@@ -5,22 +5,22 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.TreeTableColumn?>
-<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.AdminController">
    <opaqueInsets>
       <Insets />
    </opaqueInsets>
    <children>
-      <TextField layoutX="37.0" layoutY="124.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="167.0" promptText="Book Name">
+      <TextField fx:id="Book_Name" layoutX="37.0" layoutY="124.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="167.0" promptText="Book Name">
          <font>
             <Font name="Arial" size="10.0" />
          </font>
       </TextField>
-      <TextField layoutX="37.0" layoutY="168.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="167.0" promptText="Author  Name">
+      <TextField fx:id="Author_Name" layoutX="37.0" layoutY="168.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="167.0" promptText="Author  Name">
          <font>
             <Font name="Arial" size="10.0" />
          </font>
@@ -39,7 +39,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <ComboBox layoutX="37.0" layoutY="211.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="167.0" />
+      <ComboBox fx:id="Category" layoutX="37.0" layoutY="211.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="167.0" />
       <Label alignment="CENTER" layoutX="37.0" layoutY="81.0" prefHeight="18.0" prefWidth="164.0" style="-fx-background-color: #fbbc84#fbbc84 #fbbc84#fbbc84;" text="Input Book Infomation" textFill="#06034d" textOverrun="CLIP">
          <font>
             <Font name="Arial" size="14.0" />
@@ -60,30 +60,30 @@
             <Font name="Arial" size="10.0" />
          </font>
       </Label>
-      <TreeTableView layoutX="224.0" layoutY="110.0" prefHeight="207.0" prefWidth="355.0">
+      <TableView fx:id="bookDataTableView" layoutX="224.0" layoutY="110.0" prefHeight="207.0" prefWidth="355.0">
         <columns>
-          <TreeTableColumn prefWidth="24.4801025390625" text="ID" />
-          <TreeTableColumn prefWidth="114.48416137695312" text="Book Name" />
-            <TreeTableColumn prefWidth="112.51580810546875" text="Author" />
-            <TreeTableColumn prefWidth="103.15322875976562" text="Category" />
+          <TableColumn prefWidth="24.4801025390625" text="ID" />
+          <TableColumn prefWidth="114.48416137695312" text="Book Name" />
+            <TableColumn prefWidth="112.51580810546875" text="Author" />
+            <TableColumn prefWidth="103.15322875976562" text="Category" />
         </columns>
-      </TreeTableView>
-      <Button layoutX="456.0" layoutY="326.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="51.0" style="-fx-background-color: #06034d#06034d;" text="Delate" textFill="WHITE">
+      </TableView>
+      <Button fx:id="clearBtn" layoutX="456.0" layoutY="326.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="16.0" prefWidth="51.0" style="-fx-background-color: #06034d#06034d;" text="Delate" textFill="WHITE">
          <font>
             <Font name="Arial" size="10.0" />
          </font>
       </Button>
-      <Label alignment="CENTER" layoutX="283.0" layoutY="81.0" prefHeight="18.0" prefWidth="232.0" style="-fx-background-color: #fbbc84#fbbc84 #fbbc84#fbbc84;" text="Book Infomation From Database" textFill="#06034d" textOverrun="CLIP">
+      <Label alignment="CENTER" layoutX="287.0" layoutY="81.0" prefHeight="18.0" prefWidth="227.0" style="-fx-background-color: #fbbc84#fbbc84 #fbbc84#fbbc84;" text="Book Infomation From Database" textFill="#06034d" textOverrun="CLIP">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </Label>
-      <Button layoutX="95.0" layoutY="270.0" mnemonicParsing="false" style="-fx-background-color: #06034d#06034d;" text="Submit" textFill="WHITE">
+      <Button fx:id="addEntryBtn" layoutX="95.0" layoutY="270.0" mnemonicParsing="false" onAction="#addNewBook" style="-fx-background-color: #06034d#06034d;" text="Submit" textFill="WHITE">
          <font>
             <Font name="Arial" size="10.0" />
          </font>
       </Button>
-      <Button layoutX="289.0" layoutY="327.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="51.0" text="Reload">
+      <Button layoutX="289.0" layoutY="327.0" mnemonicParsing="false" onAction="#loadBookData" prefHeight="16.0" prefWidth="51.0" text="Reload">
          <font>
             <Font name="Arial" size="10.0" />
          </font>

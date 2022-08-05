@@ -29,12 +29,12 @@
         <columns>
           <TableColumn prefWidth="60.0" text="Classics" />
           <TableColumn prefWidth="60.0" text="Tragedy" />
-            <TableColumn prefWidth="60.0" text="SF" />
-            <TableColumn prefWidth="60.0" text="Fantasy" />
-            <TableColumn prefWidth="60.0" text="Action" />
-            <TableColumn prefWidth="60.0" text="Mystery" />
-            <TableColumn prefWidth="60.0" text="Romance" />
-            <TableColumn prefWidth="60.0" text="Comedy" />
+          <TableColumn prefWidth="60.0" text="SF" />
+          <TableColumn prefWidth="60.0" text="Fantasy" />
+          <TableColumn prefWidth="60.0" text="Action" />
+          <TableColumn prefWidth="60.0" text="Mystery" />
+          <TableColumn prefWidth="60.0" text="Romance" />
+          <TableColumn prefWidth="60.0" text="Comedy" />
         </columns>
       </TableView>
       <Label alignment="CENTER" layoutX="188.0" layoutY="99.0" prefHeight="25.0" prefWidth="223.0" style="-fx-background-color: #fbbc84#fbbc84;" text="Inventory Figures by Categories" textFill="#06034d">

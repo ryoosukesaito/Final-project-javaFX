@@ -62,7 +62,7 @@ public class LoginController /*implements Initializable*/ {
 			
 			Stage adminStage = new Stage();
 			FXMLLoader adminLoader = new FXMLLoader();
-			Pane root = (Pane) adminLoader.load(getClass().getResource("/home/Home.fxml").openStream());
+			Pane root = (Pane) adminLoader.load(getClass().getResource("/admin/Edit.fxml").openStream());
 			
 			Scene scene = new Scene(root);
 //			scene.getRoot().setStyle(null);

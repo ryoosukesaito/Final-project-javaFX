@@ -14,6 +14,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -26,7 +27,7 @@ public class AdminController implements Initializable {
 	@FXML
 	private TextField Author_Name;
 	@FXML
-	private TextField Category;
+	private ComboBox<String> Category;
 	
 	@FXML
 	private TableView<BookData> bookDataTableView;
@@ -54,10 +55,14 @@ public class AdminController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		this.dbc = dbConnection.getConnection();
+		
+		ObservableList<String>list = FXCollections.observableArrayList("1","2","3");
+		this.Category.setItems(list);
+		this.Category.setValue("Select a category");
 	}
 	
 	@FXML
-	public void loadEmployeeData(ActionEvent event) {
+	public void loadBookData(ActionEvent event) {
 		String sql = "SELECT * FROM b0522.edit_tbl";
 		
 		Connection conn = dbc;
@@ -85,10 +90,11 @@ public class AdminController implements Initializable {
 		this.categoryColumn.setCellValueFactory(new PropertyValueFactory<BookData, String>("Category"));
 		
 		this.bookDataTableView.setItems(bookData);
+//		this.bookDataTableView.setRoot((TreeItem<BookData>) bookData);;
 	}
 	
 	@FXML
-	private void addEmployee(ActionEvent event) {
+	private void addNewBook(ActionEvent event) {
 		String sql = "INSERT INTO b0522.edit_tbl (Book_Name, Author_Name, Category) VALUES (?,?,?)";
 		PreparedStatement statement = null;
 		
@@ -98,7 +104,7 @@ public class AdminController implements Initializable {
 			
 			statement.setString(1, this.Book_Name.getText());
 			statement.setString(2, this.Author_Name.getText());
-			statement.setString(3, this.Category.getText());
+			statement.setString(3, this.Category.getValue());
 			
 			statement.execute();
 			
@@ -120,7 +126,6 @@ public class AdminController implements Initializable {
 	private void clearFields(ActionEvent event) {
 		this.Book_Name.setText("");
 		this.Author_Name.setText("");
-		this.Category.setText("");
 	}
 	
 	
