@@ -40,11 +40,11 @@
    <left>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-<!--               <ImageView fitHeight="400.0" fitWidth="231.0" pickOnBounds="true" preserveRatio="true">
+<!--                <ImageView fitHeight="400.0" fitWidth="231.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/loginImage.jpg" />
                </image>
-            </ImageView>  -->
+            </ImageView> -->  
          </children>
       </AnchorPane>
    </left>
