@@ -51,7 +51,7 @@
    <center>
       <AnchorPane prefHeight="400.0" prefWidth="377.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="73.0" layoutY="42.0" text=" BOOK INVETORY" textAlignment="CENTER" textFill="#06034d">
+            <Label layoutX="63.0" layoutY="42.0" text=" BOOK INVENTORY" textAlignment="CENTER" textFill="#06034d">
                <font>
                   <Font name="Rockwell" size="25.0" />
                </font>
@@ -76,22 +76,23 @@
                   <Font name="Arial" size="13.0" />
                </font>
             </PasswordField>
-            <Label layoutX="57.0" layoutY="233.0" text="Password" textFill="#06034d">
+            <Label layoutX="50.0" layoutY="233.0" text="Password" textFill="#06034d">
                <font>
                   <Font name="Arial Rounded MT Bold" size="13.0" />
                </font>
             </Label>
-            <Button fx:id="loginBtn" layoutX="160.0" layoutY="287.0" mnemonicParsing="false" onAction="#Login" prefHeight="28.0" prefWidth="57.0" text="Login" textFill="#06034d">
+            <Button fx:id="loginBtn" layoutX="164.0" layoutY="286.0" mnemonicParsing="false" onAction="#Login" prefHeight="28.0" prefWidth="57.0" style="-fx-background-color: #06034d#06034d;" text="Login" textFill="WHITE">
                <font>
                   <Font name="Arial" size="13.0" />
                </font>
             </Button>
-            <Hyperlink layoutX="108.0" layoutY="334.0" text="Look the book invetory as guest">
+            <Hyperlink layoutX="108.0" layoutY="334.0" text="Look the book invetory as a guest">
                <font>
                   <Font name="Arial" size="11.0" />
                </font>
             </Hyperlink>
             <Label fx:id="loginStatus" layoutX="125.0" layoutY="137.0" prefHeight="21.0" prefWidth="163.0" textFill="RED" />
+            <Hyperlink layoutX="245.0" layoutY="289.0" text="Sign up" textFill="#06034d" underline="true" />
          </children>
       </AnchorPane>
    </center>
