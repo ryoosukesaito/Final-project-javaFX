@@ -15,12 +15,12 @@
       <Insets />
    </opaqueInsets>
    <children>
-      <TextField layoutX="37.0" layoutY="124.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="167.0" promptText="Book Name">
+      <TextField layoutX="37.0" layoutY="124.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="167.0" promptText="Book Name">
          <font>
             <Font name="Arial" size="10.0" />
          </font>
       </TextField>
-      <TextField layoutX="37.0" layoutY="168.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="167.0" promptText="Author  Name">
+      <TextField layoutX="37.0" layoutY="197.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="167.0" promptText="Author  Name">
          <font>
             <Font name="Arial" size="10.0" />
          </font>
@@ -39,8 +39,8 @@
             </Label>
          </children>
       </AnchorPane>
-      <ComboBox layoutX="37.0" layoutY="211.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="167.0" />
-      <Label layoutX="37.0" layoutY="154.0" text="Author Name">
+      <ComboBox layoutX="37.0" layoutY="269.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="167.0" />
+      <Label layoutX="37.0" layoutY="183.0" text="Author Name">
          <font>
             <Font name="Arial" size="10.0" />
          </font>
@@ -50,12 +50,12 @@
             <Font name="Arial" size="10.0" />
          </font>
       </Label>
-      <Label layoutX="37.0" layoutY="197.0" text="Category">
+      <Label layoutX="37.0" layoutY="255.0" text="Category">
          <font>
             <Font name="Arial" size="10.0" />
          </font>
       </Label>
-      <Button layoutX="95.0" layoutY="270.0" mnemonicParsing="false" style="-fx-background-color: #06034d#06034d;" text="Search" textFill="WHITE">
+      <Button layoutX="97.0" layoutY="327.0" mnemonicParsing="false" style="-fx-background-color: #06034d#06034d;" text="Search" textFill="WHITE">
          <font>
             <Font name="Arial" size="10.0" />
          </font>
@@ -68,12 +68,12 @@
             <TreeTableColumn prefWidth="103.15322875976562" text="Category" />
          </columns>
       </TreeTableView>
-      <Label alignment="CENTER" layoutX="37.0" layoutY="81.0" prefHeight="18.0" prefWidth="164.0" style="-fx-background-color: #fbbc84#fbbc84 #fbbc84#fbbc84;" text="Input Book Infomation" textFill="#06034d" textOverrun="CLIP">
+      <Label alignment="CENTER" layoutX="46.0" layoutY="81.0" prefHeight="18.0" prefWidth="149.0" style="-fx-background-color: #fbbc84#fbbc84 #fbbc84#fbbc84;" text="Input Book Infomation" textFill="#06034d" textOverrun="CLIP">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="283.0" layoutY="81.0" prefHeight="18.0" prefWidth="232.0" style="-fx-background-color: #fbbc84#fbbc84 #fbbc84#fbbc84;" text="Book Infomation From Database" textFill="#06034d" textOverrun="CLIP">
+      <Label alignment="CENTER" layoutX="294.0" layoutY="81.0" prefHeight="18.0" prefWidth="219.0" style="-fx-background-color: #fbbc84#fbbc84 #fbbc84#fbbc84;" text="Book Infomation From Database" textFill="#06034d" textOverrun="CLIP">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
