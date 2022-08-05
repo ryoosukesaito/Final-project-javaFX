@@ -4,9 +4,9 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -27,7 +27,7 @@
       </TextField>
       <AnchorPane prefHeight="67.0" prefWidth="600.0" style="-fx-background-color: #014457;">
          <children>
-            <Button layoutX="519.0" layoutY="26.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="51.0" text="Home">
+            <Button layoutX="519.0" layoutY="26.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="51.0" text="Logout">
                <font>
                   <Font name="Arial" size="10.0" />
                </font>
