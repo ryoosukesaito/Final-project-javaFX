@@ -56,9 +56,9 @@ public class AdminController implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		this.dbc = dbConnection.getConnection();
 		
-		ObservableList<String>list = FXCollections.observableArrayList("1","2","3");
+		ObservableList<String>list = FXCollections.observableArrayList("Classics","Tragedy","SF","Fantasy","Action","Mystery","Romance","Comedy");
 		this.Category.setItems(list);
-		this.Category.setValue("Select a category");
+		this.Category.setValue("Select a Category");
 	}
 	
 	@FXML
