@@ -68,7 +68,7 @@
             <TableColumn fx:id="categoryColumn" prefWidth="103.15322875976562" text="Category" />
         </columns>
       </TableView>
-      <Button fx:id="clearBtn" layoutX="425.0" layoutY="327.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="16.0" prefWidth="51.0" text="Delate">
+      <Button fx:id="deleteBtn" layoutX="425.0" layoutY="327.0" mnemonicParsing="false" onAction="#deleteFields" prefHeight="16.0" prefWidth="51.0" text="Delate">
          <font>
             <Font name="Arial" size="10.0" />
          </font>
@@ -78,12 +78,17 @@
             <Font name="Arial" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="addEntryBtn" layoutX="97.0" layoutY="327.0" mnemonicParsing="false" onAction="#addNewBook" style="-fx-background-color: #06034d#06034d;" text="Submit" textFill="WHITE">
+      <Button fx:id="addEntryBtn" layoutX="56.0" layoutY="327.0" mnemonicParsing="false" onAction="#addNewBook" style="-fx-background-color: #06034d#06034d;" text="Submit" textFill="WHITE">
          <font>
             <Font name="Arial" size="10.0" />
          </font>
       </Button>
       <Button fx:id="loadBtn" layoutX="331.0" layoutY="327.0" mnemonicParsing="false" onAction="#loadBookData" prefHeight="16.0" prefWidth="51.0" style="-fx-background-color: #06034d#06034d #06034d#06034d;" text="Reload" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="clearBtn" layoutX="122.0" layoutY="327.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="18.0" prefWidth="51.0" text="Clear">
          <font>
             <Font name="Arial" size="10.0" />
          </font>

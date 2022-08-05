@@ -6,28 +6,46 @@ import javafx.beans.property.StringProperty;
 public class BookData {
 	
 	private StringProperty id;
-	private StringProperty Book_Name;
-	private StringProperty Author_Name;
-	private StringProperty Category;
+	private StringProperty bookName;
+	private StringProperty authorName;
+	private StringProperty category;
 	
-	public BookData(String id, String Book_Name, String Author_Name, String Category) {
+	public BookData(String id, String bookName, String authorName, String category) {
 		this.id = new SimpleStringProperty(id);
-		this.Book_Name = new SimpleStringProperty(Book_Name);
-		this.Author_Name = new SimpleStringProperty(Author_Name);
-		this.Category = new SimpleStringProperty(Category);
+		this.bookName = new SimpleStringProperty(bookName);
+		this.authorName = new SimpleStringProperty(authorName);
+		this.category = new SimpleStringProperty(category);
 	}	
 	
 	public StringProperty idProperty() {
 		return id;
 	}
-	public StringProperty nameProperty() {
-		return Book_Name;
+	public StringProperty bookNameProperty() {
+		return bookName;
 	}
-	public StringProperty departmentProperty() {
-		return Author_Name;
+	public StringProperty authorNameProperty() {
+		return authorName;
 	}
-	public StringProperty salaryProperty() {
-		return Category;
+	public StringProperty categoryProperty() {
+		return category;
 	}
+
+	public StringProperty getId() {
+		return id;
+	}
+
+	public StringProperty getBookName() {
+		return bookName;
+	}
+
+	public StringProperty getAuthorName() {
+		return authorName;
+	}
+
+	public StringProperty getCategory() {
+		return category;
+	}
+	
+	
 
 }

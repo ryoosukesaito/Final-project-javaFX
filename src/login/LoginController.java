@@ -50,11 +50,13 @@ public class LoginController /*implements Initializable*/ {
 ////			this.dbStatus.setText("Not Connected");
 ////		}
 //		
-//		Image image = new Image(getClass().getResourceAsStream("@../img/loginImage.jpg"));
+////		Image image = new Image(getClass().getResourceAsStream("@../img/loginImage.jpg"));
+////		imageView.setImage(image);
+//		Image image = new Image("/img/loginImage.jpg");
 //		imageView.setImage(image);
-//		
-//		
-//		
+		
+		
+		
 //	}
 	
 	@FXML

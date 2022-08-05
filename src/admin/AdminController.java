@@ -50,6 +50,8 @@ public class AdminController implements Initializable {
 	@FXML
 	private Button clearBtn;
 	@FXML
+	private Button deleteBtn;
+	@FXML
 	private Button loadBtn;
 	@FXML
 	private Button logoutBtn;
@@ -93,9 +95,9 @@ public class AdminController implements Initializable {
 		}
 		
 		this.idColumn.setCellValueFactory(new PropertyValueFactory<BookData, String>("id"));
-		this.booknameColumn.setCellValueFactory(new PropertyValueFactory<BookData, String>("Book_Name"));
-		this.authernameColumn.setCellValueFactory(new PropertyValueFactory<BookData, String>("Author_Name"));
-		this.categoryColumn.setCellValueFactory(new PropertyValueFactory<BookData, String>("Category"));
+		this.booknameColumn.setCellValueFactory(new PropertyValueFactory<BookData, String>("bookName"));
+		this.authernameColumn.setCellValueFactory(new PropertyValueFactory<BookData, String>("authorName"));
+		this.categoryColumn.setCellValueFactory(new PropertyValueFactory<BookData, String>("category"));
 		
 		this.bookDataTableView.setItems(bookData);
 //		this.bookDataTableView.setRoot((TreeItem<BookData>) bookData);;
@@ -134,8 +136,21 @@ public class AdminController implements Initializable {
 	private void clearFields(ActionEvent event) {
 		this.Book_Name.setText("");
 		this.Author_Name.setText("");
+		this.Category.setValue("Select a Category");
 	}
 	
+	@FXML
+	private void deleteFields(ActionEvent event) {
+		TableView<BookData> table = new TableView<>();
+
+	    BookData selectedItem = table.getSelectionModel().getSelectedItem();
+	    
+	    System.out.println(selectedItem.getBookName());
+	    table.getItems().remove(selectedItem);
+//		deleteBtn.setOnAction(e -> {
+//			
+//		});
+	}
 //	public void userLogOut(ActionEvent event) throws IOException {
 //	    Main m = new Main();
 //	    m.changeScene("Edit.fxml");

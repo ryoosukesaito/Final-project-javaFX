@@ -11,11 +11,11 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.SignUpController">
    <children>
-<!--  	<ImageView fitHeight="337.0" fitWidth="200.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+  	<ImageView fitHeight="337.0" fitWidth="200.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/loginImage.jpg" />
+            <Image url="@/img/loginImage.jpg" />
          </image>
-      </ImageView>  -->
+      </ImageView>  
       <AnchorPane layoutY="-3.0" prefHeight="67.0" prefWidth="600.0" style="-fx-background-color: #014457#014457;">
          <children>
             <Label layoutX="16.0" layoutY="26.0" text=" BOOK INVENTORY MANAGEMENT SYSTEM" textFill="WHITE">
