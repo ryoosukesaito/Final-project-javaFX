@@ -50,13 +50,13 @@ public class LoginController /*implements Initializable*/ {
 			Stage stage = (Stage) this.loginBtn.getScene().getWindow();
 			stage.close();
 			
-			homeLogin();
+			adminLogin();
 		}else {
 			this.loginStatus.setText("Wrong Credentials");
 		}
 	}
 	
-	public void homeLogin() {
+	public void adminLogin() {
 		
 		try {
 			

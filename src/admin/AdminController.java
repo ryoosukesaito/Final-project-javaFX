@@ -46,6 +46,8 @@ public class AdminController implements Initializable {
 	private Button clearBtn;
 	@FXML
 	private Button loadBtn;
+	@FXML
+	private Button logoutBtn;
 	
 	private Connection dbc;
 	private ObservableList<BookData> bookData;
@@ -128,5 +130,8 @@ public class AdminController implements Initializable {
 		this.Author_Name.setText("");
 	}
 	
+	private void logout(ActionEvent event) {
+		
+	}
 	
 }

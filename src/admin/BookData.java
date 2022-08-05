@@ -10,11 +10,11 @@ public class BookData {
 	private StringProperty Author_Name;
 	private StringProperty Category;
 	
-	public BookData(String id, String Book_Name, String Author_Name, String salary) {
+	public BookData(String id, String Book_Name, String Author_Name, String Category) {
 		this.id = new SimpleStringProperty(id);
 		this.Book_Name = new SimpleStringProperty(Book_Name);
 		this.Author_Name = new SimpleStringProperty(Author_Name);
-		this.Category = new SimpleStringProperty(salary);
+		this.Category = new SimpleStringProperty(Category);
 	}	
 	
 	public StringProperty idProperty() {
