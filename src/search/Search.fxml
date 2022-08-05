@@ -10,24 +10,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="search.SearchController">
    <opaqueInsets>
       <Insets />
    </opaqueInsets>
    <children>
-      <TextField layoutX="37.0" layoutY="124.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="167.0" promptText="Book Name">
+      <TextField fx:id="Book_Name" layoutX="37.0" layoutY="124.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="167.0" promptText="Book Name">
          <font>
             <Font name="Arial" size="10.0" />
          </font>
       </TextField>
-      <TextField layoutX="37.0" layoutY="197.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="167.0" promptText="Author  Name">
+      <TextField fx:id="Author_Name" layoutX="37.0" layoutY="197.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="167.0" promptText="Author  Name">
          <font>
             <Font name="Arial" size="10.0" />
          </font>
       </TextField>
       <AnchorPane prefHeight="67.0" prefWidth="600.0" style="-fx-background-color: #014457;">
          <children>
-            <Button layoutX="495.0" layoutY="26.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="75.0" text="Back to login">
+            <Button fx:id="logoutBtn" layoutX="495.0" layoutY="26.0" mnemonicParsing="false" onAction="#backTo" prefHeight="18.0" prefWidth="75.0" text="Back to login">
                <font>
                   <Font name="Arial" size="10.0" />
                </font>
@@ -39,7 +39,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <ComboBox layoutX="37.0" layoutY="269.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="167.0" />
+      <ComboBox fx:id="Category" layoutX="37.0" layoutY="269.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="167.0" />
       <Label layoutX="37.0" layoutY="183.0" text="Author Name">
          <font>
             <Font name="Arial" size="10.0" />
@@ -55,7 +55,7 @@
             <Font name="Arial" size="10.0" />
          </font>
       </Label>
-      <Button layoutX="97.0" layoutY="327.0" mnemonicParsing="false" style="-fx-background-color: #06034d#06034d;" text="Search" textFill="WHITE">
+      <Button fx:id="addEntryBtn" layoutX="97.0" layoutY="327.0" mnemonicParsing="false" style="-fx-background-color: #06034d#06034d;" text="Search" textFill="WHITE">
          <font>
             <Font name="Arial" size="10.0" />
          </font>

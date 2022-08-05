@@ -40,11 +40,11 @@
    <left>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="400.0" fitWidth="231.0" pickOnBounds="true" preserveRatio="true">
+<!--               <ImageView fitHeight="400.0" fitWidth="231.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/loginImage.jpg" />
                </image>
-            </ImageView>
+            </ImageView>  -->
          </children>
       </AnchorPane>
    </left>
@@ -86,13 +86,13 @@
                   <Font name="Arial" size="13.0" />
                </font>
             </Button>
-            <Hyperlink layoutX="108.0" layoutY="334.0" text="Look the book invetory as a guest">
+            <Hyperlink fx:id="toSearchlbl" layoutX="108.0" layoutY="334.0" onAction="#toSearchFnc" text="Look the book invetory as a guest">
                <font>
                   <Font name="Arial" size="11.0" />
                </font>
             </Hyperlink>
             <Label fx:id="loginStatus" layoutX="125.0" layoutY="137.0" prefHeight="21.0" prefWidth="163.0" textFill="RED" />
-            <Hyperlink layoutX="245.0" layoutY="289.0" text="Sign up" textFill="#06034d" underline="true" />
+            <Hyperlink fx:id="SignUplbl" layoutX="245.0" layoutY="289.0" onAction="#SignUp" text="Sign up" textFill="#06034d" underline="true" />
          </children>
       </AnchorPane>
    </center>

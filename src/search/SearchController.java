@@ -1,4 +1,5 @@
-package admin;
+package search;
+
 
 import java.io.IOException;
 import java.net.URL;
@@ -8,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+import admin.BookData;
 import databaseUtil.dbConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -25,7 +27,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class AdminController implements Initializable {
+public class SearchController implements Initializable {
 
 	@FXML
 	private TextField Book_Name;
@@ -45,15 +47,11 @@ public class AdminController implements Initializable {
 	@FXML
 	private TableColumn<BookData, String> categoryColumn;
 	
-	@FXML
-	private Button addEntryBtn;
-	@FXML
-	private Button clearBtn;
+
 	@FXML
 	private Button loadBtn;
 	@FXML
 	private Button logoutBtn;
-	
 	
 	private Connection dbc;
 	private ObservableList<BookData> bookData;
@@ -98,7 +96,7 @@ public class AdminController implements Initializable {
 		this.categoryColumn.setCellValueFactory(new PropertyValueFactory<BookData, String>("Category"));
 		
 		this.bookDataTableView.setItems(bookData);
-//		this.bookDataTableView.setRoot((TreeItem<BookData>) bookData);;
+//			this.bookDataTableView.setRoot((TreeItem<BookData>) bookData);;
 	}
 	
 	@FXML
@@ -136,15 +134,15 @@ public class AdminController implements Initializable {
 		this.Author_Name.setText("");
 	}
 	
-//	public void userLogOut(ActionEvent event) throws IOException {
-//	    Main m = new Main();
-//	    m.changeScene("Edit.fxml");
-//	}
+//		public void userLogOut(ActionEvent event) throws IOException {
+//		    Main m = new Main();
+//		    m.changeScene("Edit.fxml");
+//		}
 //	
-//	public void toSearch2 (ActionEvent event) throws IOException {
-//	    Main m = new Main();
-//	    m.changeScene("Search.fxml");
-//	}
+//		public void toSearch2 (ActionEvent event) throws IOException {
+//		    Main m = new Main();
+//		    m.changeScene("Search.fxml");
+//		}
 	public void backTo(ActionEvent event) throws IOException {
 		Stage stage = (Stage) this.logoutBtn.getScene().getWindow();
 		stage.close();
@@ -167,4 +165,28 @@ public class AdminController implements Initializable {
 			e.printStackTrace();
 		}		
 	}
+//	public void toAdmin (ActionEvent event) throws IOException {
+//        Main m = new Main();
+//        m.changeScene("Edit.fxml");
+//    }
+//	
+//	String selectSQL = "SELECT USER_ID, USERNAME FROM DBUSER WHERE USER_ID = ?";
+//    dbConnection = getDBConnection();
+//    preparedStatement = dbConnection.prepareStatement(selectSQL);
+//    preparedStatement.setInt(1, 1001);
+//    // execute select SQL stetement
+//    ResultSet rs = preparedStatement.executeQuery();
+//    try {
+//      while (rs.next()) {
+//        String userid = rs.getString("USER_ID");
+//        String username = rs.getString("USERNAME");
+//        System.out.println("userid : " + userid);
+//      }
+//      } catch (SQLException e1) {
+//        // TODO Auto-generated catch block
+//        e1.printStackTrace();
+//      } finally {
+//        preparedStatement.close();
+//        dbConnection.close();
+//      }
 }

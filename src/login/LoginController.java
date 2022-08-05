@@ -2,6 +2,7 @@ package login;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -10,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
@@ -29,6 +31,10 @@ public class LoginController /*implements Initializable*/ {
 	private Button loginBtn;
 	@FXML
 	private Label loginStatus;
+	@FXML
+	private Hyperlink SignUplbl;
+	@FXML
+	private Hyperlink toSearchlbl;
 
 //	@Override
 //	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -74,6 +80,68 @@ public class LoginController /*implements Initializable*/ {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	
+	
+	public void SignUp(ActionEvent event) throws IOException {
+		Stage stage = (Stage) this.SignUplbl.getScene().getWindow();
+		stage.close();
+		
+		userSignUp();
+		
+
+    }
+	
+	public void userSignUp(){
+		try {
+			
+			Stage regiStage = new Stage();
+			FXMLLoader regiLoader = new FXMLLoader();
+			Pane root = (Pane) regiLoader.load(getClass().getResource("/login/SignUp.fxml").openStream());
+			
+			Scene scene = new Scene(root);
+
+			regiStage.setScene(scene);
+
+			regiStage.show();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}		
+	}
+	
+	
+	
+//    public void toSearch(ActionEvent event) throws IOException {
+//        Main m = new Main();
+//        m.changeScene("Search.fxml");
+//}
+	public void toSearch(ActionEvent event) throws IOException {
+		Stage stage = (Stage) this.toSearchlbl.getScene().getWindow();
+		stage.close();
+		
+		userSignUp();
+		
+
+    }
+	
+	public void toSearchFnc(){
+		try {
+			
+			Stage regiStage = new Stage();
+			FXMLLoader regiLoader = new FXMLLoader();
+			Pane root = (Pane) regiLoader.load(getClass().getResource("/search/Search.fxml").openStream());
+			
+			Scene scene = new Scene(root);
+			
+			regiStage.setScene(scene);
+
+			regiStage.show();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}		
 	}
 
 }
